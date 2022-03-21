@@ -3,6 +3,7 @@
 ## Author: Aelobin (The Maelstrom EU) & Lombra (Defias Brotherhood EU)
 ## Version: 3.3.2
 ## SavedVariables: MogItDB, MogItWishlist
+## RequiredDeps DataStore, DataStore_Vanity
 ## OptionalDeps: DataStore_Containers
 ## Notes: Transmogrification Assistant
 ## Notes-frFR: Transmogrification Assistante
