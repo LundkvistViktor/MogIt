@@ -165,7 +165,7 @@ ItemInfo.RegisterCallback(mog, "OnItemInfoReceivedBatch", "ItemInfoReceived");
 -- Disabling Datastore for now, causing LUA errors.  Note to fix later.
 function mog:HasItem(itemID)
 	local storeID = VANITY_CONTENT_REFERENCE[itemID]
-	return (GetItemCount(itemID, true) > 0 or CheckKnownItem(itemID))
+	return (GetItemCount(itemID, true) > 0 or CheckKnownItem(itemID) or CheckKnownItem(storeID))
 end
 
 
