@@ -230,6 +230,10 @@ function ModelFramePrototype:TryOn(item, slot)
 	self.model:TryOn(item, tryOnSlots[slot]);
 end
 
+function ModelFramePrototype:SetUnit(unit)
+	self.model:SetUnit(unit);
+end
+
 function ModelFramePrototype:Undress()
 	self.model:Undress()
 end

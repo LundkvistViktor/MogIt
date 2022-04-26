@@ -209,10 +209,11 @@ local previewMenu = {
 		text = L["Equip current gear"],
 		notCheckable = true,
 		func = function(self)
+			currentPreview.model:SetUnit("player");
 			for k, v in pairs(currentPreview.slots) do
 				mog.view.DelItem(k, currentPreview);
 				local slotID = GetInventorySlotInfo(k);
-				local item = GetInventoryItemID("player", slotID) --mog.mogSlots[slotID] and select(6, GetTransmogrifySlotInfo(slotID)) or
+				local item = C_Transmog_GetSlotInfo(slotID) --mog.mogSlots[slotID] and select(6, GetTransmogrifySlotInfo(slotID)) or
 --				print(item)
 				if (k ~= "HeadSlot" or ShowingHelm()) and (k ~= "BackSlot" or ShowingCloak()) then
 					mog.view.AddItem(item, currentPreview);
@@ -758,6 +759,7 @@ function mog:AddToPreview(item,preview)
 	
 	return preview;
 end
+
 
 function mog.view:Undress(preview)
 	for k, v in pairs(preview.slots) do
