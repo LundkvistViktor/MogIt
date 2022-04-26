@@ -140,8 +140,7 @@ local itemOptionsMenu = {
 		text = L["Get Items"],
 		func = function(self)
 			local storeID = mog:GetData("item", self.value, "storeID")
-			if(DataStore and DataStore.GetVanityInfo and DataStore:GetVanityInfo(DataStore:GetCharacter()).Known[storeID]) then
-				print(storeID)
+			if(CheckKnownItem(storeID)) then
 				RequestDeliverVanityCollectionItem(storeID)
 			end
 			CloseDropDownMenus()

@@ -6,8 +6,6 @@ local ItemInfo = LibStub("LibItemInfo-1.0");
 
 LibStub("Libra"):EmbedWidgets(mog);
 
---local character = DataStore_Containers and DataStore:GetCharacter();
-
 mog.frame = CreateFrame("Frame","MogItFrame",UIParent,"ButtonFrameTemplate");
 mog.list = {};
 
@@ -167,9 +165,7 @@ ItemInfo.RegisterCallback(mog, "OnItemInfoReceivedBatch", "ItemInfoReceived");
 -- Disabling Datastore for now, causing LUA errors.  Note to fix later.
 function mog:HasItem(itemID)
 	local storeID = VANITY_CONTENT_REFERENCE[itemID]
-	return GetItemCount(itemID, true) > 0 
-	or (DataStore and DataStore.GetVanityInfo and DataStore:GetVanityInfo(DataStore:GetCharacter()).Known[storeID])
-	or (DataStore and DataStore.GetVanityInfo and DataStore:GetVanityInfo(DataStore:GetCharacter()).Known[itemID])
+	return (GetItemCount(itemID, true) > 0 or CheckKnownItem(itemID))
 end
 
 

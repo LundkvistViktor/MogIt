@@ -111,7 +111,7 @@ function mog.base:FrameUpdate(frame, value)
 	frame.data.cycle = 1;
 	frame.data.item = value[frame.data.cycle];
 	for i, item in ipairs(value) do
-		if mog:HasItem(item) or (DataStore_VanityDB and DataStore_VanityDB[item] and DataStore_VanityDB[item].known) then
+		if mog:HasItem(item) then
 			frame:ShowIndicator("hasItem");
 		end
 		if mog.wishlist:IsItemInWishlist(item) then
