@@ -353,7 +353,7 @@ function mog.ShowItemTooltip(self, item, items, cycle)
 	
 	local isPartOfBundle = (VANITY_CONTENT_REFERENCE[item] and VANITY_CONTENT_REFERENCE[item] ~= item)
 	if(isPartOfBundle == true) then
-		GameTooltip:AddLine( "Part of: "..select(2, GetItemInfo(VANITY_CONTENT_REFERENCE[item])), 1, 1, 1)
+		GameTooltip:AddLine("Part of: " ..select(2, GetItemInfo(VANITY_CONTENT_REFERENCE[item])) or "not found")
 	end
 	if mog:HasItem(item) then
 		GameTooltip:AddLine(" ")
