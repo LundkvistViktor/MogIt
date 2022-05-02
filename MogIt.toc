@@ -1,6 +1,6 @@
 ﻿## Interface: 30300
-## Title: MogIt
-## Author: Aelobin (The Maelstrom EU) & Lombra (Defias Brotherhood EU)
+## Title: MogIt - Sell DP to fiat ;)
+## Author: Aelobin (The Maelstrom EU) & Lombra (Defias Brotherhood EU) - Fiat for Ascension fix
 ## Version: 3.3.2
 ## SavedVariables: MogItDB, MogItWishlist
 ## OptionalDeps: DataStore_Containers
